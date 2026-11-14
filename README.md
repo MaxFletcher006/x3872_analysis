@@ -26,12 +26,17 @@ The X(3872) is a resonance in the charmonium-mass region. Studying its mass dist
 
 The analysis uses reconstructed decay products to form the J/ψ, X(3872), and B⁺ candidates. The invariant mass of a system is calculated from the sum of the daughter particles' four-momenta:
 
+## Invariant Mass Calculation
+
+The invariant mass is calculated using the four-momenta of the daughter particles:
+
 $$
-M^2 =
-\left(\sum_i E_i\right)^2
+M^2 = \left(\sum_i E_i\right)^2
 -
 \left|\sum_i \vec{p}_i\right|^2
 $$
+
+where natural units \(c=1\) are used.
 
 using natural units where \(c=1\).
 
