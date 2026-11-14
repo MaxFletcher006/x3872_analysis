@@ -1,32 +1,39 @@
-X(3872) Resonance Analysis with LHCb Data
-This repository contains the analysis workflow for studying the
-(X(3872)) resonance using LHCb data. The analysis reconstructs the
-decay chain
-\[
-`\rightarrow `{=tex}J/`\psi`{=tex},`\pi`{=tex}^+`\pi`{=tex}^-,
-`\qquad `{=tex}J/`\psi `{=tex}`\rightarrow `{=tex}`\mu`{=tex}^+`\mu`{=tex}^-.
-\]
-The project covers event selection and candidate reconstruction with the
-Gaudi/DaVinci framework, kinematic calculations using four-vectors,
-mass-distribution studies with ROOT/RooFit, and signal--background
-classification with TMVA.
-Status: This README documents the workflow described in the
-project presentation and the ROOT/RooFit macro shared during
-development. Exact dataset paths, production configuration, and final
-fit results should be added when they are confirmed in the repository.
+# X(3872) Resonance Analysis with LHCb Data
 
-Physics motivation
-The (X(3872)) is a resonance in the charmonium-mass region. Studying its
-mass distribution and production through (B^+) decays provides a way to
-investigate its properties.
+This repository contains the analysis workflow for studying the **X(3872) resonance** using LHCb data.
 
-The analysis uses reconstructed decay products to form the
-(J/`\psi`{=tex}), (X(3872)), and (B^+) candidates. The invariant mass
-of a system is calculated from the sum of the daughter particles'
-four-momenta:
-`\left`{=tex}\|`\sum`{=tex}\_i `\vec{p}`{=tex}\_i`\right`{=tex}\|\^2, \]
+The analysis reconstructs the decay chain:
 
-using natural units where (c=1).
+$$
+B^+ \rightarrow X(3872) K^+
+$$
+
+$$
+X(3872) \rightarrow J/\psi\,\pi^+\pi^-
+$$
+
+$$
+J/\psi \rightarrow \mu^+\mu^-
+$$
+
+The project covers event selection and candidate reconstruction with the Gaudi/DaVinci framework, kinematic calculations using four-vectors, mass-distribution studies with ROOT/RooFit, and signal-background classification with TMVA.
+
+**Status:** This README documents the workflow described in the project presentation and the ROOT/RooFit macro shared during development. Exact dataset paths, production configuration, and final fit results should be added when they are confirmed in the repository.
+
+## Physics Motivation
+
+The X(3872) is a resonance in the charmonium-mass region. Studying its mass distribution and production through B meson decays provides a way to investigate its properties.
+
+The analysis uses reconstructed decay products to form the J/ψ, X(3872), and B⁺ candidates. The invariant mass of a system is calculated from the sum of the daughter particles' four-momenta:
+
+$$
+M^2 =
+\left(\sum_i E_i\right)^2
+-
+\left|\sum_i \vec{p}_i\right|^2
+$$
+
+using natural units where \(c=1\).
 
 ## Decay channel
 
