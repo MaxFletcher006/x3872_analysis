@@ -18,8 +18,6 @@ $$
 
 The project covers event selection and candidate reconstruction with the Gaudi/DaVinci framework, kinematic calculations using four-vectors, mass-distribution studies with ROOT/RooFit, and signal-background classification with TMVA.
 
-**Status:** This README documents the workflow described in the project presentation and the ROOT/RooFit macro shared during development. Exact dataset paths, production configuration, and final fit results should be added when they are confirmed in the repository.
-
 ## Physics Motivation
 
 The X(3872) is a resonance in the charmonium-mass region. Studying its mass distribution and production through B meson decays provides a way to investigate its properties.
@@ -28,13 +26,10 @@ The analysis uses reconstructed decay products to form the J/ψ, X(3872), and B�
 
 ## Invariant Mass Calculation
 
-The invariant mass is calculated using the four-momenta of the daughter particles:
+The invariant mass is calculated from the four-momenta of the daughter particles:
 
-$$
-M^2 = \left(\sum_i E_i\right)^2
--
-\left|\sum_i \vec{p}_i\right|^2
-$$
+```text
+M² = (Σ Eᵢ)² − |Σ p⃗ᵢ|²
 
 where natural units \(c=1\) are used.
 
@@ -225,7 +220,7 @@ plus `collision_data.csv` are in the current working directory, run the
 macro with:
 
 ``` bash
-root -l -q 'b_m_full.C'
+root -l b_m_full.C
 ```
 
 For an interactive session:
@@ -254,14 +249,12 @@ possible organization is:
 ├── README.md
 ├── data/
 │   └── collision_data.csv
-├── davinci/
-│   └──                 # DaVinci configuration scripts
 ├── macros/
 │   ├── b_m_full.C      # B-candidate mass fit
 │   └──                 # X(3872) mass-fit macros
 ├── tmva/
 │   └──                 # BDT training and evaluation
-└── figures/
+└── plots/
     └──                 # Analysis plots
 ```
 
